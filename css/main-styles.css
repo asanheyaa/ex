@@ -257,3 +257,8 @@ body {
   font-weight: 700;
   color: purple;
 }
+
+.footer {
+  text-align: center;
+  padding: 20px;
+}
