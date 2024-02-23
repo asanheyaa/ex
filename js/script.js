@@ -1,10 +1,12 @@
 // burger
 
-const burger = document.querySelector('.burger');
+const burger = document.querySelector('.burger'),
+	menu = document.querySelector('.menu');
+	
 
 burger.addEventListener('click', (e) => {
 	burger.classList.toggle('_active');
-	document.querySelector('.menu').classList.toggle('_active');
+	menu.classList.toggle('_active');
 })
 
 
@@ -14,17 +16,17 @@ if (sections) {
 	sections.forEach(section => {
 		const label = section.querySelector('.section__title');
 		if (label) {
-			listMenu.insertAdjacentHTML('afterbegin',
+			listMenu.insertAdjacentHTML('beforeend',
 				`
 				 <li class="menu__item">
                         <a href="" class="menu__link">${label.innerHTML}</a>
                     </li>
 			`)
-			const menuLink = document.querySelector('.menu__link');
-			menuLink.addEventListener('click', (e)=>{
+			const menuList = document.querySelector('.menu__list');
+			menuList.lastElementChild.addEventListener('click', (e)=>{
 				e.preventDefault()
 				window.scrollTo({
-					top: section.offsetTop,
+					top: section.offsetTop - 20,
 					behavior: "smooth",
 				});
 			})

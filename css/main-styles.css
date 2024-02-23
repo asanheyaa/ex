@@ -247,3 +247,7 @@ body {
 .menu__item {
   list-style: none;
 }
+.section__title {
+  font-weight: 700;
+  color: purple;
+}
