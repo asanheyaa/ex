@@ -153,6 +153,7 @@ body {
   top: 0;
   left: 0;
   padding: 20px;
+  z-index: 100;
 }
 
 .burger {
@@ -170,6 +171,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   z-index: 100;
+  position: relative;
   background: none;
   cursor: pointer;
 }
