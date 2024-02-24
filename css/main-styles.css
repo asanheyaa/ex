@@ -226,6 +226,7 @@ body._lock {
 .menu__item {
   list-style: none;
   margin: 0;
+  overflow: hidden;
 }
 .menu__link {
   color: #444;
@@ -241,8 +242,13 @@ body._lock {
   top: 100%;
   left: 0;
   background: purple;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: width 0s ease 0.3s, -webkit-transform 0.3s ease 0s;
+  transition: width 0s ease 0.3s, -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, width 0s ease 0.3s;
+  transition: transform 0.3s ease 0s, width 0s ease 0.3s, -webkit-transform 0.3s ease 0s;
+  -webkit-transform: translate(100%, 0);
+      -ms-transform: translate(100%, 0);
+          transform: translate(100%, 0);
 }
 @media (max-width: 991.98px) {
   .menu__link {
@@ -256,6 +262,13 @@ body._lock {
 }
 @media (min-width: 991.98px) {
   .menu__link._active::after {
+    -webkit-transition: width 0.3s ease 0s, -webkit-transform 0s ease 0s;
+    transition: width 0.3s ease 0s, -webkit-transform 0s ease 0s;
+    transition: width 0.3s ease 0s, transform 0s ease 0s;
+    transition: width 0.3s ease 0s, transform 0s ease 0s, -webkit-transform 0s ease 0s;
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
     content: "";
     width: 100%;
   }
