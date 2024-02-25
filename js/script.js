@@ -6,8 +6,8 @@ const burger = document.querySelector('.burger'),
 	listMenu = document.querySelector('.menu__list'),
 	header = document.querySelector('.header'),
 	footer = document.querySelector('.footer');
-	 
-	
+
+
 
 burger.addEventListener('click', (e) => {
 	burger.classList.toggle('_active');
@@ -25,10 +25,21 @@ if (sections) {
 				`
 				 <li class="menu__item">
                         <a href="#${section.dataset.section}" class="menu__link">${section.dataset.section}</a>
+						<ul class="menu__submenu-list">
+                   			 <li class="menu__submenu-item">
+                        		<a href="" class="menu__submenu-link">Link</a>
+                    		</li>
+                   			 <li class="menu__submenu-item">
+                        		<a href="" class="menu__submenu-link">Link</a>
+                    		</li>
+                   			 <li class="menu__submenu-item">
+                        		<a href="" class="menu__submenu-link">Link</a>
+                    		</li>
+                		</ul>
                     </li>
 			`)
 			const menuList = document.querySelector('.menu__list');
-			menuList.lastElementChild.addEventListener('click', (e)=>{
+			menuList.lastElementChild.firstElementChild.addEventListener('click', (e) => {
 				e.preventDefault()
 				document.body.classList.remove('_lock')
 				burger.classList.remove('_active');
@@ -42,6 +53,8 @@ if (sections) {
 	});
 }
 
+let lastScrollPosition = 0
+
 function activeMenu() {
 
 	if (sections) {
@@ -49,7 +62,7 @@ function activeMenu() {
 
 		function activeMenuFunction(e) {
 			let itemsless = []
-			
+
 			sections.forEach(section => {
 				if (section.getBoundingClientRect().top - (header.offsetHeight * 2) < 0) {
 					itemsless.push(section);
@@ -74,6 +87,18 @@ function activeMenu() {
 				const currentLink = menu.querySelector(`[href='#${id}']`);
 				currentLink.classList.add('_active')
 			}
+
+
+			if (lastScrollPosition < window.scrollY) {
+				menu.classList.remove('--sroll-up')
+				menu.classList.add('--sroll-down')
+				lastScrollPosition = window.scrollY
+			} else {
+				menu.classList.add('--sroll-up')
+				menu.classList.remove('--sroll-down')
+				lastScrollPosition = window.scrollY
+			}
+
 		}
 		activeMenuFunction();
 	}
