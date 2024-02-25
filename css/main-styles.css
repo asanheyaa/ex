@@ -285,10 +285,10 @@ body._lock {
   height: 2px;
   top: calc(100% - 5px);
   background: #6740d4;
-  -webkit-transition: width 0s ease 0.2s, -webkit-transform 0.2s ease 0s;
-  transition: width 0s ease 0.2s, -webkit-transform 0.2s ease 0s;
-  transition: transform 0.2s ease 0s, width 0s ease 0.2s;
-  transition: transform 0.2s ease 0s, width 0s ease 0.2s, -webkit-transform 0.2s ease 0s;
+  -webkit-transition: width 0s ease 0.4s, -webkit-transform 0.2s ease 0.25s;
+  transition: width 0s ease 0.4s, -webkit-transform 0.2s ease 0.25s;
+  transition: transform 0.2s ease 0.25s, width 0s ease 0.4s;
+  transition: transform 0.2s ease 0.25s, width 0s ease 0.4s, -webkit-transform 0.2s ease 0.25s;
 }
 @media (max-width: 991.98px) {
   .menu__link {
@@ -302,10 +302,10 @@ body._lock {
 }
 @media (min-width: 991.98px) {
   .menu__link._active::after {
-    -webkit-transition: width 0.2s ease 0s, -webkit-transform 0s ease 0s;
-    transition: width 0.2s ease 0s, -webkit-transform 0s ease 0s;
-    transition: width 0.2s ease 0s, transform 0s ease 0s;
-    transition: width 0.2s ease 0s, transform 0s ease 0s, -webkit-transform 0s ease 0s;
+    -webkit-transition: width 0.2s ease 0.1s, -webkit-transform 0s ease 0s;
+    transition: width 0.2s ease 0.1s, -webkit-transform 0s ease 0s;
+    transition: width 0.2s ease 0.1s, transform 0s ease 0s;
+    transition: width 0.2s ease 0.1s, transform 0s ease 0s, -webkit-transform 0s ease 0s;
     width: 100%;
   }
 }
