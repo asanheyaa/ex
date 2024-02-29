@@ -2,11 +2,14 @@
 
 const burger = document.querySelector('.burger'),
 	menu = document.querySelector('.menu'),
+	page = document.querySelector('.page'),
 	sections = document.querySelectorAll('[data-section]'),
 	listMenu = document.querySelector('.menu__list'),
 	header = document.querySelector('.header'),
 	footer = document.querySelector('.footer');
 
+
+page.style.paddingTop = `${header.offsetHeight + 50}px`
 
 
 burger.addEventListener('click', (e) => {

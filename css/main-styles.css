@@ -420,6 +420,26 @@ body._lock {
   left: 0;
 }
 
+.section__table {
+  overflow: auto;
+  padding-bottom: 10px;
+}
+.section__table table {
+  border-collapse: collapse;
+}
+.section__table th,
+.section__table td {
+  padding: 6px 13px;
+  border: 1px solid #6740d4;
+}
+.section__table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+.section__table tr:nth-child(2n) {
+  background-color: #f2f0f0;
+}
+
 .section__title {
   font-weight: 700;
   color: #6740d4;

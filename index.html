@@ -12,14 +12,23 @@
 <body>
     <div class="wrapper">
 
+        <!-- HERE HEADER OF PAGE -->
         <header class="header">
             <div class="header__container">
-                <a href="" class="header__logo">Skyra</a>
+                <a href="" class="header__logo">
+                    <!-- HER LOGO, NOW IT'S JUST TEXT -->
+                    <!-- In the "font-size" style, specify the font size. In the "font-family" style, specify which font you want to use. -->
+                    <span style="font-size: 30px; font-family: Arial, Helvetica, sans-serif;">Skyra</span>
+                    <!-- If you want a picture of the logo, use the following tag :
+                    <img style="max-width: 100px;" src="img/logo.png" alt="logo">
+                    where in the "src" attribute you need to specify the path to the logo image. And in the "max-width" style, its width of image. So you can customize the size of the logo -->
+                </a>
                 <nav class="menu">
                     <ul class="menu__list">
 
                     </ul>
                 </nav>
+                <!-- BURGER MENU -->
                 <button type="button" class="burger">
                     <div class="burger__line  burger__line-1"></div>
                     <div class="burger__line burger__line-2"></div>
@@ -29,24 +38,43 @@
 
         </header>
 
-
+        <!-- HERE PAGE -->
         <main class="page">
             <div class="page__container">
-                <!-- <h1 class="page__main-title"><span style="color: purple;"> Skyra </span></h1> -->
                 <strong><i>Ride the bike. Drive the car. Take the boat.</i></strong>
                 <br>
                 <br>
+                <!-- THIS IS SECTION OF THE PAGE -->
+                <!-- in the "data-section" attribute, write the text that will be displayed in the header as a link to this section and will scroll when you click on it -->
                 <div data-section="What is Skyra?" class="section">
+                    <!-- this title of section -->
                     <h3 class="section__title">What is Skyra?</h3>
+                    <!--the "br" tag is a downward indent with its help you can adjust the distance between elements (the more <br> tags, the greater the distance)  -->
                     <br>
+                    <!-- the "p" tag is a regular paragraph of text -->
                     <p>Skyra is a racing game.</p>
                     <br>
                     <p>Join us for weekly races. Weekly releases are below:</p>
                     <br>
+                    <!-- use the "ul" tag to create a list  -->
                     <ul>
-                        <li>Version 1</li>
-                        <li>Version 2</li>
-                        <li>Version 3</li>
+                        <!-- the "li" tag is a list item -->
+                        <li>
+                            <!-- 'i' tag make text italic -->
+                            <i>Version 1</i>
+                        </li>
+                        <li>
+                            <!-- 'b' tag make text bold -->
+                            <b>Version 2</b>
+                        </li>
+                        <li>
+                            <!-- 'mark' tag make text bold -->
+                            <mark>Version 3</mark>
+                        </li>
+                        <li>
+                            <!-- 'u' tag underline  text -->
+                            <u>Version 4</u>
+                        </li>
                     </ul>
                     <br>
                     <p>
@@ -59,6 +87,8 @@
                 </div>
                 <br>
                 <br>
+                  <!-- THIS IS SECTION OF THE PAGE -->
+                <!-- in the "data-section" attribute, write the text that will be displayed in the header as a link to this section and will scroll when you click on it -->
                 <div data-section="Ride the bike" class="section">
                     <h3 class="section__title">Ride the bike</h3>
                     <br>
@@ -68,6 +98,8 @@
                 </div>
                 <br>
                 <br>
+                  <!-- THIS IS SECTION OF THE PAGE -->
+                <!-- in the "data-section" attribute, write the text that will be displayed in the header as a link to this section and will scroll when you click on it -->
                 <div data-section="Drive the car" class="section">
                     <h3 class="section__title">Drive the car</h3>
                     <br>
@@ -82,7 +114,8 @@
                     <ul>
                         <li>Thursday night game will be the tie-breaker</li>
                         <li>That said, the Thursday night game is optional and not part of the regular contest</li>
-                        <li>To qualify for the Thursday tie-breaker, all entries for the week must be input before the start
+                        <li>To qualify for the Thursday tie-breaker, all entries for the week must be input before the
+                            start
                             of Thursday's game</li>
                         <li>The second tie-breaker will be a raffle</li>
                     </ul>
@@ -90,15 +123,81 @@
                 </div>
                 <br>
                 <br>
-                <div data-section="Explore this chart" class="section">
-                    <h3 class="section__title">Explore this chart...</h3>
+                  <!-- THIS IS SECTION OF THE PAGE -->
+                <!-- in the "data-section" attribute, write the text that will be displayed in the header as a link to this section and will scroll when you click on it -->
+                <div data-section="Table" class="section">
+                    <h3 class="section__title">Table</h3>
                     <br>
-                    <iframe width="652.0381355932203" height="370.38247863247864" style="max-width:100%;" seamless frameborder="0"
-                        scrolling="no"
-                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ0HWQj_yPDABqmRG12ssAnKe7Pwx0mk7ZkZpJagAuT12iO6tiaAgfuejm2TGXchNlz_LmLqQQGEwai/pubchart?oid=455048405&format=interactive"></iframe>
+                    <!-- THIS IS TABLE -->
+                    <div class="section__table">
+                        <table>
+                            <thead>
+                                <!-- HEAD OF THE TABLE WITH CHAPTERS  -->
+                                <tr>
+                                    <th>title1</th>
+                                    <th>title2</th>
+                                    <th>title3</th>
+                                    <th>title4</th>
+                                    <th>title5</th>
+                                    <th>title6</th>
+                                    <th>title7</th>
+                                    <th>title8</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- ROW OF THE TABLE -->
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                </tr>
+                                 <!-- ROW OF THE TABLE -->
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                </tr>
+                                 <!-- ROW OF THE TABLE -->
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                </tr>
+                                 <!-- ROW OF THE TABLE -->
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
                 </div>
                 <br>
                 <br>
+                  <!-- THIS IS SECTION OF THE PAGE -->
+                <!-- in the "data-section" attribute, write the text that will be displayed in the header as a link to this section and will scroll when you click on it -->
                 <div data-section="Leaderboard" class="section">
                     <h3 class="section__title">Leaderboard</h3>
                     <br>
@@ -107,18 +206,22 @@
                 </div>
                 <br>
                 <br>
+                  <!-- THIS IS SECTION OF THE PAGE -->
+                <!-- in the "data-section" attribute, write the text that will be displayed in the header as a link to this section and will scroll when you click on it -->
                 <div data-section="Sign up" class="section">
                     <h3 class="section__title">Sign up</h3>
                     <br>
-                    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/xleboaod"
-                        method="post">
+                    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8"
+                        action="https://formspree.io/xleboaod" method="post">
                         <fieldset id="fs-frm-inputs">
                             <label for="full-name">Full Name</label>
                             <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
                             <label for="email-address">Email Address</label>
-                            <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+                            <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld"
+                                required="">
                             <label for="tournamentID">Tournament ID</label>
-                            <textarea rows="2" name="tournamentID" id="tournamentID" placeholder="2600" required=""></textarea>
+                            <textarea rows="2" name="tournamentID" id="tournamentID" placeholder="2600"
+                                required=""></textarea>
                             <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
                         </fieldset>
                         <br />
@@ -128,10 +231,12 @@
                 <br>
                 <br>
                 <br>
-                
-                <p><i style="color: purple;">Good luck everyone!</i></p>
+
+             
+                <p><i>Good luck everyone!</i></p>
                 <br>
-                <p><i>Skyra is for entertainment and collectibles. In no way is this project for gambling purposes.</i></p>
+                <p><i>Skyra is for entertainment and collectibles. In no way is this project for gambling purposes.</i>
+                </p>
             </div>
         </main>
         <footer class="footer">
