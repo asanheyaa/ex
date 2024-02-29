@@ -20,40 +20,52 @@ burger.addEventListener('click', (e) => {
 
 
 
-if (sections) {
+if (sections.length > 0) {
 	sections.forEach(section => {
-		const label = section.querySelector('.section__title');
-		if (label) {
-			listMenu.insertAdjacentHTML('beforeend',
-				`
+
+		listMenu.insertAdjacentHTML('beforeend',
+			`
 				 <li class="menu__item">
                         <a href="#${section.dataset.section}" class="menu__link">${section.dataset.section}</a>
-						<ul class="menu__submenu-list">
-                   			 <li class="menu__submenu-item">
-                        		<a href="" class="menu__submenu-link">Link</a>
-                    		</li>
-                   			 <li class="menu__submenu-item">
-                        		<a href="" class="menu__submenu-link">Link</a>
-                    		</li>
-                   			 <li class="menu__submenu-item">
-                        		<a href="" class="menu__submenu-link">Link</a>
-                    		</li>
-                		</ul>
+						
                     </li>
 			`)
-			const menuList = document.querySelector('.menu__list');
-			menuList.lastElementChild.firstElementChild.addEventListener('click', (e) => {
-				e.preventDefault()
-				document.body.classList.remove('_lock')
-				burger.classList.remove('_active');
-				menu.classList.remove('_active');
-				window.scrollTo({
-					top: section.offsetTop - (header.offsetHeight * 2) + 1,
-					behavior: "smooth",
-				});
-			})
+
+		const subSections = section.querySelectorAll('[data-subsection]');
+		const menuList = document.querySelector('.menu__list');
+
+		if (subSections.length > 0) {
+			const listSubMenu = document.createElement('ul')
+			listSubMenu.classList.add('menu__submenu-list')
+			menuList.lastElementChild.append(listSubMenu)
+			subSections.forEach(subSection => {
+				listSubMenu.insertAdjacentHTML('beforeend',
+					`
+					<li class="menu__submenu-item">
+                        <a href="${subSection.dataset.subsection}" class="menu__submenu-link">${subSection.dataset.subsection}</a>
+                    </li>
+				`)
+				listSubMenu.lastElementChild.firstElementChild.addEventListener('click', (e) => {
+					scrollOnClick(e, subSection)
+				})
+			});
 		}
+		menuList.lastElementChild.firstElementChild.addEventListener('click', (e) => {
+			scrollOnClick(e, section)
+		})
+
 	});
+
+	function scrollOnClick(e, section) {
+		e.preventDefault()
+		document.body.classList.remove('_lock')
+		burger.classList.remove('_active');
+		menu.classList.remove('_active');
+		window.scrollTo({
+			top: section.offsetTop - (header.offsetHeight * 2) + 1,
+			behavior: "smooth",
+		});
+	}
 }
 
 let lastScrollPosition = 0
@@ -85,10 +97,10 @@ function activeMenu() {
 				return
 			}
 			let lastElem = itemsless.slice(-1)[0];
-			const id = lastElem.dataset.section;
-			if (id) {
-				const currentLink = menu.querySelector(`[href='#${id}']`);
-				currentLink.classList.add('_active')
+			if (lastElem) {
+				const id = lastElem.dataset.section;
+					const currentLink = menu.querySelector(`[href='#${id}']`);
+					currentLink.classList.add('_active')
 			}
 
 
@@ -115,7 +127,7 @@ activeMenu()
 const logo = document.querySelector('.header__logo');
 
 
-logo.addEventListener('click', (e)=>{
+logo.addEventListener('click', (e) => {
 	e.preventDefault()
 	window.scrollTo({
 		top: 0,
