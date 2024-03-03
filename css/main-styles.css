@@ -157,7 +157,7 @@ body._lock {
   left: 0;
   padding: 18px 0;
   z-index: 100;
-  border-bottom: 1px solid #787878;
+  border-bottom: 1px solid #dedcdc;
 }
 .header__container {
   display: -webkit-box;
