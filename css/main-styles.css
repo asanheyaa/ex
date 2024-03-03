@@ -157,7 +157,7 @@ body._lock {
   left: 0;
   padding: 20px 0;
   z-index: 100;
-  border-bottom: 1px solid #6740d4;
+  border-bottom: 1px solid #444444;
 }
 .header__container {
   display: -webkit-box;
@@ -178,12 +178,12 @@ body._lock {
   height: 100%;
   top: 0;
   left: 0;
-  background: #fff;
+  background: #808080;
 }
 .header__logo {
   font-weight: 700;
   font-size: 30px;
-  color: #6740d4;
+  color: #444444;
   position: relative;
   z-index: 2;
 }
