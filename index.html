@@ -24,8 +24,19 @@
                     <!-- In the "font-size" style, specify the font size. In the "font-family" style, specify which font you want to use. -->
                     <span style="font-size: 30px; font-family: Courier, New, sans-serif;">Skyra</span>
                     <!-- If you want a picture of the logo, use the following tag :
-                    <img style="max-width: 100px;" src="img/logo.png" alt="logo">
-                    where in the "src" attribute you need to specify the path to the logo image. And in the "max-width" style, its width of image. So you can customize the size of the logo -->
+
+                     <div class="section__image" style="max-width: 100px; margin-left: auto;">
+                        <img src="img/logo.png" alt="logo">
+                    </div>
+
+                -->
+                    <!-- In styles, you can use the max-width property to set the width of the image in pixels. To align
+                            it, use the following
+                                    properties:
+                                            to align the image to the left edge: "margin-right: auto;",
+                                            to align the image in the center: "margin: 0 auto;",
+                                            to align the image to the right edge: "margin-left: auto;". -->
+                    <!-- In the "src" attribute of the "img" tag, specify the path to the image. In the "alt" attribute, specify a short description of the picture (optional) -->
                 </a>
                 <nav class="menu">
                     <ul class="menu__list">
@@ -34,9 +45,9 @@
                 </nav>
                 <!-- BURGER MENU -->
                 <button type="button" class="burger">
-                    <div class="burger__line  burger__line-1"></div>
-                    <div class="burger__line burger__line-2"></div>
-                    <div class="burger__line burger__line-3"></div>
+                    <span class="burger__line  burger__line-1"></span>
+                    <span class="burger__line burger__line-2"></span>
+                    <span class="burger__line burger__line-3"></span>
                 </button>
             </div>
 
@@ -122,19 +133,63 @@
                     <br>
                     <!-- THIS IS SUB-SECTION OF THE PAGE -->
                     <!-- in the "data-subsection" attribute, write the text that will be displayed in the header as a link to this sub-section and will scroll when you click on it -->
-                    <div data-subsection="Images">
-                        <h4 class="section__subsection-title">Images Example</h4>
+                    <div data-subsection="Image and align">
+                        <h4 class="section__subsection-title">Image and align Examples</h4>
                         <br>
                         <!-- THIS IS IMAGE -->
-                        <!-- in the styles, the "text-align" option specifies the alignment of the picture (left, center, right) -->
-                        <div style="text-align: right;" class="section__image">
-                            <img src="img/page-content/page-content-image_02.jpg" alt="page-content-image">
-                        </div>
-                        <br>
-                        <div class="section__image">
+                        <!-- In styles, you can use the "max-width" optionto set the width of the image in pixels. To align
+                        it, use the following
+                        properties:
+                        to align the image to the left edge: "margin-right: auto;",
+                        to align the image in the center: "margin: 0 auto;",
+                        to align the image to the right edge: "margin-left: auto;". -->
+                        <div class="section__image" style="max-width: 400px; margin-left: auto;">
+                            <!-- In the "src" attribute, specify the path to the image. In the "alt" attribute, specify a short description of the picture (optional) -->
                             <img src="img/page-content/page-content-image_01.jpg" alt="page-content-image">
                         </div>
-                       
+                        <br>
+                        <br>
+                        <!-- THIS IS IMAGE -->
+                        <!-- In styles, you can use the "max-width" optionto set the width of the image in pixels. To align
+                                                it, use the following
+                                                properties:
+                                                to align the image to the left edge: "margin-right: auto;",
+                                                to align the image in the center: "margin: 0 auto;",
+                                                to align the image to the right edge: "margin-left: auto;". -->
+                        <div class="section__image" style="max-width: 400px; margin: 0 auto;">
+                            <!-- In the "src" attribute, specify the path to the image. In the "alt" attribute, specify a short description of the picture (optional) -->
+                            <img src="img/page-content/page-content-image_01.jpg" alt="page-content-image">
+                        </div>
+                        <br>
+                        <!-- THIS IS IMAGE -->
+                        <!-- In styles, you can use the "max-width" optionto set the width of the image in pixels. To align
+                                                it, use the following
+                                                properties:
+                                                to align the image to the left edge: "margin-right: auto;",
+                                                to align the image in the center: "margin: 0 auto;",
+                                                to align the image to the right edge: "margin-left: auto;". -->
+                        <div class="section__image" style="max-width: 400px; margin-right: auto;">
+                            <!-- In the "src" attribute, specify the path to the image. In the "alt" attribute, specify a short description of the picture (optional) -->
+                            <img src="img/page-content/page-content-image_01.jpg" alt="page-content-image">
+                        </div>
+                        <br>
+                        <!--  the "text-align" option specifies the alignment of the text (left, center, right) -->
+                        <p style="text-align: right;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Cupiditate sapiente quis, voluptas maiores delectus dignissimos asperiores non facere
+                            reiciendis vel dolor est eligendi quod voluptatum excepturi cumque eaque, perspiciatis sed.
+                        </p>
+                        <br>
+                        <!--  the "text-align" option specifies the alignment of the text (left, center, right) -->
+                        <p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Cupiditate sapiente quis, voluptas maiores delectus dignissimos asperiores non facere
+                            reiciendis vel dolor est eligendi quod voluptatum excepturi cumque eaque, perspiciatis sed.
+                        </p>
+                        <br>
+                        <!--  the "text-align" option specifies the alignment of the text (left, center, right) -->
+                        <p style="text-align: left;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Cupiditate sapiente quis, voluptas maiores delectus dignissimos asperiores non facere
+                            reiciendis vel dolor est eligendi quod voluptatum excepturi cumque eaque, perspiciatis sed.
+                        </p>
                     </div>
                 </div>
                 <!-- THIS IS END OF THE SECTION -->
@@ -245,7 +300,7 @@
                 <div data-section="Leaderboard" class="section">
                     <h3 class="section__title">Leaderboard</h3>
                     <br>
-                    <iframe width="600" height="371" seamless frameborder="0" scrolling="no"
+                    <iframe width="600" height="371"
                         src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSX7uG1pVnMiq8WkizZOCIK2gjY651X8hfrVfLOKQE9zB7T0NqO91NWftMzaPXSInu-Ad2gFGtf5EFx/pubchart?oid=2119877749&format=interactive"></iframe>
                 </div>
                 <!-- THIS IS END OF THE SECTION -->
@@ -331,23 +386,23 @@
                         <li class="menu-footer__item">
                             <a href="" class="menu-footer__link">IP Rights</a>
                         </li>
-                        <ul class="menu-footer__social-list">
-                            <li class="menu-footer__item">
-                                <a href="" class="menu-footer__link">
-                                    <img src="img/social-icons/social-icon_01.png" alt="social-icon">
-                                </a>
-                            </li>
-                            <li class="menu-footer__item">
-                                <a href="" class="menu-footer__link">
-                                    <img src="img/social-icons/social-icon_02.png" alt="social-icon">
-                                </a>
-                            </li>
-                            <li class="menu-footer__item">
-                                <a href="" class="menu-footer__link">
-                                    <img src="img/social-icons/social-icon_03.png" alt="social-icon">
-                                </a>
-                            </li>
-                        </ul>
+                    </ul>
+                    <ul class="menu-footer__social-list">
+                        <li class="menu-footer__item">
+                            <a href="" class="menu-footer__link">
+                                <img src="img/social-icons/social-icon_01.png" alt="social-icon">
+                            </a>
+                        </li>
+                        <li class="menu-footer__item">
+                            <a href="" class="menu-footer__link">
+                                <img src="img/social-icons/social-icon_02.png" alt="social-icon">
+                            </a>
+                        </li>
+                        <li class="menu-footer__item">
+                            <a href="" class="menu-footer__link">
+                                <img src="img/social-icons/social-icon_03.png" alt="social-icon">
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div>
