@@ -1,5 +1,3 @@
-// burger
-
 const burger = document.querySelector('.burger'),
 	menu = document.querySelector('.menu'),
 	page = document.querySelector('.page'),
@@ -9,9 +7,10 @@ const burger = document.querySelector('.burger'),
 	footer = document.querySelector('.footer');
 
 
+// padding depending on the height of the header
 page.style.paddingTop = `${header.offsetHeight + 50}px`
 
-
+// burger-menu
 burger.addEventListener('click', (e) => {
 	burger.classList.toggle('_active');
 	menu.classList.toggle('_active');
@@ -19,7 +18,7 @@ burger.addEventListener('click', (e) => {
 })
 
 
-
+// automatic creation of links in the menu
 if (sections.length > 0) {
 	sections.forEach(section => {
 
@@ -32,12 +31,11 @@ if (sections.length > 0) {
 			`)
 
 		const subSections = section.querySelectorAll('[data-subsection]');
-		const menuList = document.querySelector('.menu__list');
 
 		if (subSections.length > 0) {
 			const listSubMenu = document.createElement('ul')
 			listSubMenu.classList.add('menu__submenu-list')
-			menuList.lastElementChild.append(listSubMenu)
+			listMenu.lastElementChild.append(listSubMenu)
 			subSections.forEach(subSection => {
 				listSubMenu.insertAdjacentHTML('beforeend',
 					`
@@ -50,12 +48,13 @@ if (sections.length > 0) {
 				})
 			});
 		}
-		menuList.lastElementChild.firstElementChild.addEventListener('click', (e) => {
+		listMenu.lastElementChild.firstElementChild.addEventListener('click', (e) => {
 			scrollOnClick(e, section)
 		})
 
 	});
 
+	
 	function scrollOnClick(e, section) {
 		e.preventDefault()
 		document.body.classList.remove('_lock')
@@ -70,6 +69,7 @@ if (sections.length > 0) {
 
 let lastScrollPosition = 0
 
+//Function active menu section 
 function activeMenu() {
 
 	if (sections) {
@@ -103,7 +103,7 @@ function activeMenu() {
 					currentLink.classList.add('_active')
 			}
 
-
+			// function Determining the direction of the stroll
 			if (lastScrollPosition < window.scrollY) {
 				menu.classList.remove('--sroll-up')
 				menu.classList.add('--sroll-down')
@@ -124,8 +124,8 @@ function activeMenu() {
 
 activeMenu()
 
+// click on logo function
 const logo = document.querySelector('.header__logo');
-
 
 logo.addEventListener('click', (e) => {
 	e.preventDefault()
