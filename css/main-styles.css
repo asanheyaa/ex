@@ -420,8 +420,14 @@ body._lock {
   left: 0;
 }
 
+.section{
+  overflow: auto;
+}
+
 .section__title {
   font-size: 25px;
+   font-weight: 700;
+  color: #6740d4;
 }
 .section__subsection-title {
   font-size: 22px;
@@ -447,9 +453,8 @@ body._lock {
   background-color: #f2f0f0;
 }
 
-.section__title {
-  font-weight: 700;
-  color: #6740d4;
+.section__image img {
+  max-width: 100%;
 }
 
 .footer {
