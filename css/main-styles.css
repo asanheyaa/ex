@@ -256,12 +256,6 @@ body._lock {
     padding: 0;
   }
 }
-.menu__item {
-  list-style: none;
-  margin: 0;
-  padding-bottom: 3px;
-  position: relative;
-}
 .menu__item:hover .menu__submenu-list {
   -webkit-transform: translate3d(0px, 0px, 0px);
           transform: translate3d(0px, 0px, 0px);
