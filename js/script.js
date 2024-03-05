@@ -72,7 +72,7 @@ let lastScrollPosition = 0
 //Function active menu section 
 function activeMenu() {
 
-	if (sections) {
+	if (sections.length > 0) {
 		window.addEventListener('scroll', activeMenuFunction)
 
 		function activeMenuFunction(e) {
@@ -125,7 +125,7 @@ function activeMenu() {
 activeMenu()
 
 // click on logo function
-const logo = document.querySelector('.header__logo');
+const logo = document.querySelector('.header__logo.--main-page-logo');
 
 logo.addEventListener('click', (e) => {
 	e.preventDefault()
