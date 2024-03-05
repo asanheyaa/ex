@@ -1,14 +1,106 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/main-styles.css">
+	<!-- HERE IS THE FAVICON in the "href" attribute, specify the path to the favicon -->
+	<link rel="icon" type="image/x-icon" href="img/logo.png">
+	<!-- Here you specify the TITLE THAT WILL BE DISPLAYED IN THE BROWSER TAB next to the favicon -->
 	<title>IP Rights</title>
+
 </head>
 
 <body>
-	<h1>IP Rights</h1>
+	<div class="wrapper">
+
+		<!-- HERE HEADER OF PAGE -->
+		<header class="header">
+			<div class="header__container">
+				<a href="" class="header__logo">
+					<!-- HER LOGO, NOW IT'S JUST TEXT -->
+					<!-- In the "font-size" style, specify the font size. In the "font-family" style, specify which font you want to use. -->
+					<span style="font-size: 30px; font-family: Courier, New, sans-serif;">Skyra</span>
+					<!-- If you want a picture of the logo, use the following tag :
+
+                     <div class="section__image" style="max-width: 100px; margin-left: auto;">
+                        <img src="img/logo.png" alt="logo">
+                    </div>
+
+                -->
+					<!-- In styles, you can use the max-width property to set the width of the image in pixels. To align
+                            it, use the following
+                                    properties:
+                                            to align the image to the left edge: "margin-right: auto;",
+                                            to align the image in the center: "margin: 0 auto;",
+                                            to align the image to the right edge: "margin-left: auto;". -->
+					<!-- In the "src" attribute of the "img" tag, specify the path to the image. In the "alt" attribute, specify a short description of the picture (optional) -->
+				</a>
+				<nav class="menu">
+					<ul class="menu__list">
+
+					</ul>
+				</nav>
+				<!-- BURGER MENU -->
+				<button type="button" class="burger">
+					<span class="burger__line  burger__line-1"></span>
+					<span class="burger__line burger__line-2"></span>
+					<span class="burger__line burger__line-3"></span>
+				</button>
+			</div>
+
+		</header>
+
+		<!-- HERE PAGE -->
+		<main class="page">
+			<div class="page__container">
+				<div data-section="IP Rights" class="section">
+					<!-- this title of section -->
+					<h3 class="section__title">IP Rights</h3>
+					<!--the "br" tag is a downward indent with its help you can adjust the distance between elements (the more <br> tags, the greater the distance)  -->
+					<br>
+					<!-- the "p" tag is a regular paragraph of text -->
+					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, sequi illum eligendi fugiat perspiciatis in nam voluptate officiis fugit corrupti eos voluptates aperiam ad ratione maxime rem amet iusto laboriosam?</p>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__copy">© Skyra 2024</div>
+				<nav class="menu-footer">
+					<ul class="menu-footer__list">
+						<li class="menu-footer__item">
+							<a href="privacy-policy.html" target="_blank" class="menu-footer__link">Privacy Policy</a>
+						</li>
+						<li class="menu-footer__item">
+							<a href="terms.html" target="_blank" class="menu-footer__link">Terms of Use</a>
+						</li>
+						<li class="menu-footer__item">
+							<a href="ip-rights.html" target="_blank" class="menu-footer__link">IP Rights</a>
+						</li>
+					</ul>
+					<ul class="menu-footer__social-list">
+						<li class="menu-footer__item">
+							<a href="" target="_blank" class="menu-footer__link">
+								<img src="img/social-icons/social-icon_01.png" alt="social-icon">
+							</a>
+						</li>
+						<li class="menu-footer__item">
+							<a href="" target="_blank" class="menu-footer__link">
+								<img src="img/social-icons/social-icon_02.png" alt="social-icon">
+							</a>
+						</li>
+						<li class="menu-footer__item">
+							<a href="" target="_blank" class="menu-footer__link">
+								<img src="img/social-icons/social-icon_03.png" alt="social-icon">
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</footer>
+
+	</div>
+	<script src="js/script.js"></script>
 </body>
 
 </html>
