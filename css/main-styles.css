@@ -345,30 +345,30 @@ body._lock {
   }
 }
 
-.burger {
-  margin-left: auto;
-  margin: 0 0px 0 auto;
-  width: 25px;
-  height: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: relative;
-  z-index: 2;
-  background: none;
-  cursor: pointer;
-}
-@media (min-width: 991.98px) {
-  .burger {
-    display: none;
+@media (max-width: 991.98px) {
+  .--main-page .burger {
+    margin-left: auto;
+    margin: 0 0px 0 auto;
+    width: 25px;
+    height: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative;
+    z-index: 2;
+    background: none;
+    cursor: pointer;
   }
+}
+.burger {
+    display: none;
 }
 .burger__line {
   background: #000000;
