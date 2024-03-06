@@ -183,7 +183,7 @@ body._lock {
 .header__logo {
   font-weight: 700;
   font-size: 30px;
-  color: #4d4c4c;
+  color: #000000;
   position: relative;
   z-index: 2;
 }
