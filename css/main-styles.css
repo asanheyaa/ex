@@ -288,6 +288,7 @@ body._lock {
 }
 @media (max-width: 991.98px) {
   .menu__link {
+    font-family: Courier, New, sans-serif;
     font-size: 30px;
   }
 }
