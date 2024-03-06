@@ -178,7 +178,7 @@ body._lock {
   height: 100%;
   top: 0;
   left: 0;
-  background: #468284;
+  background: #95c8d8;
 }
 .header__logo {
   font-weight: 700;
@@ -288,7 +288,6 @@ body._lock {
 }
 @media (max-width: 991.98px) {
   .menu__link {
-    font-family: Courier, New, sans-serif;
     font-size: 30px;
   }
 }
