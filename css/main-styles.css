@@ -288,7 +288,7 @@ body._lock {
 }
 @media (max-width: 991.98px) {
   .menu__link {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 @media (any-hover: hover) {
@@ -335,7 +335,7 @@ body._lock {
 }
 @media (max-width: 991.98px) {
   .menu__submenu-link {
-    font-size: 25px;
+    font-size: 20px;
     padding: 0;
     margin: 5px 20px 20px 20px;
     width: unset;
